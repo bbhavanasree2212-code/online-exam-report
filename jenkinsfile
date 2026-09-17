@@ -2,11 +2,12 @@ pipeline {
     agent any
 
     stages {
-
         stage('Checkout') {
             steps {
-                git branch: 'main',
+                git(
+                    branch: 'main',
                     url: 'https://github.com/bbhavanasree2212-code/online-exam-report.git'
+                )
             }
         }
 
@@ -18,8 +19,10 @@ pipeline {
 
         stage('Archive Report') {
             steps {
-                archiveArtifacts artifacts: 'exam_report.txt',
+                archiveArtifacts(
+                    artifacts: 'exam_report.txt',
                     fingerprint: true
+                )
             }
         }
     }
