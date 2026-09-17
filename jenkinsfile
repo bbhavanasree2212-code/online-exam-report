@@ -6,7 +6,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/bhavanasree2212-code/online-exam-report.git'
+                    url: 'https://github.com/bbhavanasree2212-code/online-exam-report.git'
             }
         }
 
