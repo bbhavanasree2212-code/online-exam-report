@@ -12,10 +12,10 @@ pipeline {
         }
 
         stage('Generate Report') {
-            steps {
-                bat 'python app.py'
-            }
-        }
+    steps {
+        bat 'C:\\Users\\bbhav\\AppData\\Local\\Python\\bin\\python.exe app.py'
+    }
+}
 
         stage('Archive Report') {
             steps {
